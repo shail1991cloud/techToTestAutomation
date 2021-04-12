@@ -15,7 +15,7 @@
 
 		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css' type='text/css' rel='stylesheet' />
 	
-	<title>ToolsQA - Cucumber Framework</title>
+	<title>TestOrganise - Cucumber Framework</title>
 
 	<style type='text/css'>
 			
@@ -39,11 +39,13 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+				<li class='waves-effect'><a href='#!' view='author-view' onclick="configureView(3)"><i class='material-icons'>person</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 		</ul>
 
 		<!-- report name -->
-		<span class='report-name'>ToolsQA - Cucumber Report</span>
+		<span class='report-name'>TestOrganise - Cucumber Report</span>
 		
 		<!-- report headline -->
 		<span class='report-headline'></span>
@@ -52,7 +54,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Apr 7, 2021 02:52:01 AM</span>
+                    <span class='label suite-start-time blue darken-3'>Apr 12, 2021 05:51:08 PM</span>
 				</a>
 			</li>
 			<li>
@@ -78,6 +80,7 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -138,10 +141,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -153,10 +156,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -168,10 +171,10 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='66.667%'><span class='strong'>2</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='33.333%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -185,30 +188,55 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Automated test</span>
-						<span class='test-time'>Apr 7, 2021 02:52:01 AM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-name'>Booking of flight in mercury ssite</span>
+						<span class='test-time'>Apr 12, 2021 05:51:08 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
-<div class='scenario node' test-id='2' status='pass'>
-	<div class='category-list'>
-		<span class='category label white-text'>@smoke</span>
-	</div>
-	<span class='duration right label'>0h 0m 22s+266ms</span>
+<div class='scenariooutline node' test-id='2' status='fail'>
+	<span class='duration right label'>0h 0m 23s+239ms</span>
 	<div class='desc'>
-		<b>Scenario</b>
-		<span class="desc-text">user is on home</span>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">validate use logins into mercury site and performs some functions on it</span>
 	</div>
 	<ul class='steps'>
-		<li test-id='3' class='node given pass' status='pass'>
+		<li test-id='3' class='node scenario fail' status='fail'>
+			<div class='category-list'>
+				<span class='category label white-text'>@smoke</span>
+			</div>
 			
-			<b>Given</b>
+			<b>Scenario</b>
 			
-			<span class="bdd-step-name">Given when user launches</span>
-				<div class='pre'>passed</div>
+			<span class="bdd-step-name">validate use logins into mercury site and performs some functions on it</span>
+				<div class='pre'>----Test is Completed----</div>
 			
+				<ul class='steps'>
+					<li test-id='4' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given user is on login page</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='5' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When enters "kdmvin" and "vinayak123"</span>
+							<div class='pre'>Login name is entered</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='6' class='node then fail' status='fail'><b>Then</b>
+						<span class="bdd-step-name">Then he is able to validate ""</span>
+						<ul class='screenshots right'>
+							<li><a data-featherlight="image" href="C:\Users\Admin\git\techToTestAutomation\target\ScreenShots\failscreen2021-04-12_17_51_32.483.png"><i class='material-icons'>panorama</i></a></li>
+						</ul>
+							<div class='pre'><pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at pageclasses.Selectflight.validateFlightDetailsTag(Selectflight.java:31)
+	at stepDefinitions.Steps.he_is_able_to_validate(Steps.java:71)
+	at ✽.Then he is able to validate ""(End2End_Test.feature:7)
+</pre></div>
+					</li>
+				</ul>
 		</li>
 	</ul>
 </div>
@@ -268,13 +296,13 @@
 					<div class='category-heading'>
 						<span class='category-name'>@smoke</span>
 						<span class='category-status right'>
-							<span class='label pass'>1</span>
+							<span class='label fail'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 1</span>
 							
+							<span class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 					
@@ -289,9 +317,9 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Apr 7, 2021 02:52:01 AM</td>
-										<td class='linked' test-id='2'>Automated test.user is on home</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td>Apr 12, 2021 05:51:08 PM</td>
+										<td class='linked' test-id='3'>Booking of flight in mercury ssite.validate use logins into mercury site and performs some functions on it.validate use logins into mercury site and performs some functions on it</td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -310,6 +338,143 @@
 	</div>
 </div>
 <!-- category view -->
+<div id='author-view' class='view hide'>
+    <section id='controls'>
+        <div class='controls grey lighten-4'>
+            <!-- search -->
+            <div class='chip transparent' alt='Search Authors' title='Search Authors'>
+                <a href="#" class='search-div'>
+                    <i class='material-icons'>search</i> Search
+                </a>
+
+                <div class='input-field left hide'>
+                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Authors...'>
+                </div>
+
+            </div>
+            <!-- search -->
+        </div>
+    </section>
+
+    <div class='subview-left left'>
+
+        <div class='view-summary'>
+            <h5>Authors</h5>
+                <ul id='author-collection' class='author-collection'>
+
+                        <li class='author displayed active'>
+                            <div class='author-heading'>
+                                <span class='author-name'>ShailendraParihar</span>
+                                <span class='author-status right'>
+                                        <span class='label fail'>1</span>
+						        </span>
+                            </div>
+                            <div class='author-content hide'>
+                                <div class='author-status-counts'>
+                                    
+                                    <span class='label red lighten-1 white-text'>Failed: 1</span>
+                                    
+                                </div>
+
+                                <div class='author-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Apr 12, 2021 05:51:08 PM</td>
+                                                <td class='linked' test-id='3'>Booking of flight in mercury ssite.validate use logins into mercury site and performs some functions on it.validate use logins into mercury site and performs some functions on it</td>
+                                                <td><span class='test-status fail'>fail</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+
+                </ul>
+        </div>
+    </div>
+
+    <div class='subview-right left'>
+        <div class='view-summary'>
+            <h5 class='author-name'></h5>
+        </div>
+    </div>
+</div>
+<div id='exception-view' class='view hide'>
+
+    <section id='controls'>
+        <div class='controls grey lighten-4'>
+            <!-- search -->
+            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
+                <a href="#" class='search-div'>
+                    <i class='material-icons'>search</i> Search
+                </a>
+
+                <div class='input-field left hide'>
+                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+                </div>
+
+            </div>
+            <!-- search -->
+        </div>
+    </section>
+
+    <div class='subview-left left'>
+
+        <div class='view-summary'>
+            <h5>Exceptions</h3>
+                <ul id='exception-collection' class='exception-collection'>
+
+                        <li class='exception displayed active'>
+                            <div class='exception-heading'>
+                                <span class='exception-name'>java.lang.AssertionError</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+                            </div>
+                            <div class='exception-content hide'>
+                                <div class='exception-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                                    <tr>
+                                                        <td>Apr 12, 2021 05:51:29 PM</td>
+                                                        <td class='linked' test-id='6'>Booking of flight in mercury ssite.validate use logins into mercury site and performs some functions on it.validate use logins into mercury site and performs some functions on it.Then he is able to validate ""</td>
+                                                        <td><pre><pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at pageclasses.Selectflight.validateFlightDetailsTag(Selectflight.java:31)
+	at stepDefinitions.Steps.he_is_able_to_validate(Steps.java:71)
+	at ✽.Then he is able to validate ""(End2End_Test.feature:7)
+</pre></pre></td>
+                                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+        </div>
+    </div>
+
+    <div class='subview-right left'>
+        <div class='view-summary'>
+            <h5 class='exception-name'></h5>
+        </div>
+    </div>
+</div>
 <!-- exception view -->
 <div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
@@ -331,25 +496,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>3</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Apr 7, 2021 02:52:01 AM</div>
+					<div class='panel-lead'>Apr 12, 2021 05:51:08 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Apr 7, 2021 02:52:24 AM</div>
+			 		<div class='panel-lead'>Apr 12, 2021 05:51:33 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>22,626ms</div>
+					<div class='panel-lead'>25,625ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -366,11 +531,11 @@
 						</tr>
 						<tr>
 							<td>@smoke</td>
+							<td>0</td>
 							<td>1</td>
 							<td>0</td>
-							<td>0</td>
 							<td>
-									100%
+									0%
 							</td>
 						</tr>
 					</table>
@@ -386,31 +551,31 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 1,
-				failParent: 0,
+				passParent: 0,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
+				exceptionsParent: 1,
 				
-				passChild: 1,
-				failChild: 0,
+				passChild: 0,
+				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				exceptionsChild: 0,
+				exceptionsChild: 1,
 				
-				passGrandChild: 1,
-				failGrandChild: 0,
+				passGrandChild: 2,
+				failGrandChild: 1,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
 				skipGrandChild: 0,
 				infoGrandChild: 0,
-				exceptionsGrandChild: 0,
+				exceptionsGrandChild: 1,
 			};
 		</script>
 		
