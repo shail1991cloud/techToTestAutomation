@@ -1,18 +1,14 @@
 package stepDefinitions;
 
-import java.io.File;
 import java.io.IOException;
-import java.sql.Timestamp;
-import java.util.Date;
 
-import org.openqa.selenium.TakesScreenshot;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.classlibrary.Browserfactory;
 import com.classlibrary.Commonfunction;
+import com.cucumber.listener.Reporter;
 
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
@@ -21,12 +17,9 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import dataprovider.ConfigFileReader;
-import io.github.bonigarcia.wdm.WebDriverManager;
+import helper.LoggerHelper;
 import pageclasses.Loginpage;
 import pageclasses.Selectflight;
-import com.cucumber.listener.Reporter;
-import org.openqa.selenium.OutputType;
-import com.google.common.io.Files;
 
 public class Steps {
 	
@@ -35,7 +28,7 @@ public class Steps {
 	Loginpage lpf;
 	Selectflight slf;
     public ConfigFileReader configFileReader;
-    
+    Logger log = LoggerHelper.getLogger(Steps.class);
     
     public Steps()
     {
@@ -43,11 +36,16 @@ public class Steps {
 		lpf=PageFactory.initElements(driver,Loginpage.class);
 		slf=PageFactory.initElements(driver,Selectflight.class);
 		configFileReader=new ConfigFileReader();
+		
+		
+		
     }
 	
     @Before
     public void beforeScenario(Scenario scenario) {
         Reporter.assignAuthor("Shailendra Parihar");
+        log.info("---Starting the Run----");
+        
     }
 
 	@Given("^user is on login page$")
@@ -56,6 +54,7 @@ public class Steps {
 		
 		 driver.get(configFileReader.getApplicationUrl());
 		 Commonfunction.commom(driver);
+		   log.info("---Launching the Browser----");
 		
 	     
 		
@@ -64,12 +63,14 @@ public class Steps {
 	public void enters_and(String username, String password) throws Throwable {
 	    lpf.login(username, password);
 	    Reporter.addStepLog("Login name is entered");
+	    log.info("---Logging In----");
 	}
 
 	@Then("^he is able to validate \"([^\"]*)\"$")
 	public void he_is_able_to_validate(String arg1) throws Throwable {
 	  slf.validateFlightDetailsTag();
 	  Reporter.addStepLog("Tag is verified");
+	   log.info("---Verifying----");
 	}
 	
 
