@@ -1,4 +1,6 @@
-GitRepositoriesView.GitDirectories=C\:\\Users\\Admin\\git\\techToTestAutomation\\.git;
-GitRepositoriesView.GitDirectories.relative=.git;
-RepositorySearchDialogSearchPath=C\:\\Users\\Admin\\git
+GitRepositoriesView.GitDirectories=C\:\\Users\\Admin\\git\\techToTestAutomation\\.git;D\:\\Shubhansi's data\\program\\jva\\.git;
+GitRepositoriesView.GitDirectories.relative=.git;D\:\\Shubhansi's data\\program\\jva\\.git;
+RepositorySearchDialogDeepSearch=false
+RepositorySearchDialogSearchPath=C\:\\Users\\Admin\\git\\techToTestAutomation
+RepositorySearchDialogSkipHidden=false
 eclipse.preferences.version=1
