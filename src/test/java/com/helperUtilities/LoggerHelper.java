@@ -1,9 +1,9 @@
-package helper;
+package com.helperUtilities;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
-import stepDefinitions.Steps;
+import com.steps.Steps;
 
 public class LoggerHelper {
 

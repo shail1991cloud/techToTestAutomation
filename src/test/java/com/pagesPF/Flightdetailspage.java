@@ -1,4 +1,4 @@
-package pageclasses;
+package com.pagesPF;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;

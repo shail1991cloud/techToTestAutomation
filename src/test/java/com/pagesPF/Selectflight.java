@@ -1,4 +1,4 @@
-package pageclasses;
+package com.pagesPF;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
@@ -6,8 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-
-import com.classlibrary.Commonfunction;
+import com.managersUtilities.Commonfunction;
 
 public class Selectflight {
 	WebDriver driver;

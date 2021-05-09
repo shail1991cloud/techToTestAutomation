@@ -1,4 +1,4 @@
-package dataprovider;
+package com.dataproviderUtilities;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -8,7 +8,7 @@ import java.util.Properties;
 
 public class ConfigFileReader {
 	
-	private Properties properties;
+	private  Properties properties;
 	private final String propertyFilePath= "src/test/java/configs/configuration.properties";
 
 	
@@ -42,11 +42,16 @@ public class ConfigFileReader {
 	}
 	
 	public String getApplicationUrl() {
-		String url = properties.getProperty("url");
+		String url = properties.getProperty("website");
 		if(url != null) return url;
 		else throw new RuntimeException("url not specified in the Configuration.properties file.");
 	}
 
+	public  String getBrowserName()
+	{
+		String browserName=properties.getProperty("Browser");
+		return browserName;
+	}
 public String getReportConfigPath(){
  String reportConfigPath = properties.getProperty("reportConfigPath");
  if(reportConfigPath!= null) return reportConfigPath;
